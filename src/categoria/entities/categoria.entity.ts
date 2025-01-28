@@ -1,0 +1,18 @@
+import { Transform, TransformFnParams } from "class-transformer";
+import { IsNotEmpty } from "class-validator";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+
+@Entity({name: 'tb_categorias'})
+export class Categoria {
+
+    // @OneToMany(() => Produto, (produto) => produto.categoria)
+    // produto: Produto[] //Cria um array de objetos postagem pra visualizar, pq um tema pode ter 1 ou mais postagens
+
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Transform(({ value }: TransformFnParams) => value?.trim()) 
+    @IsNotEmpty()
+    @Column({length: 255, nullable: false})
+    tipo: string;
+}

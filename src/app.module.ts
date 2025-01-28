@@ -16,7 +16,7 @@ import { AuthModule } from './auth/auth.module';
     username: 'root',
     password: 'root',
     database: 'db_farmacia_goal', 
-    entities: [Categoria, Produto, Usuario], // Cadastrar as Classes Entities, para que o TypeORM possa gerar as tabelas correspondentes no BD
+    autoLoadEntities: true, // Cadastrar as Classes Entities, para que o TypeORM possa gerar as tabelas correspondentes no BD
     synchronize: true,
     logging: true
   }),

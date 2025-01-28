@@ -14,11 +14,6 @@ export class Produto {
     })
     categoria: Categoria
 
-    // @ManyToOne(() => Usuario, (usuario) => usuario.produto, {
-    //     onDelete: "CASCADE" 
-    // })
-    // usuario: Usuario
-
     @PrimaryGeneratedColumn()
     id: number;
 

@@ -12,11 +12,6 @@ export class ProdutoService {
         private categoriaService: CategoriaService
     ){}
 
-    // @ManyToOne(() => Usuario, (usuario) => usuario.produto, {
-    //     onDelete: "CASCADE" 
-    // })
-    // usuario: Usuario
-
     async findAll(): Promise<Produto[]> {
         return this.produtoRepository.find({
             relations: {categoria: true}

@@ -1,5 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CategoriaModule } from './categoria/categoria.module';
+import { Categoria } from './categoria/entities/categoria.entity';
+import { Produto } from './produto/entities/produto.entity';
+import { ProdutoModule } from './produto/produto.module';
+import { Usuario } from './usuario/entities/usuario.entity';
+import { UsuarioModule } from './usuario/usuario.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -8,13 +15,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     port: 3306,
     username: 'root',
     password: 'root',
-    database: '', // Cadastrar o nome do BD
-    entities: [], // Cadastrar as Classes Entities, para que o 
-    // TypeORM possa gerar as tabelas correspondentes no BD
+    database: 'db_farmacia_goal', 
+    entities: [Categoria, Produto, Usuario], // Cadastrar as Classes Entities, para que o TypeORM possa gerar as tabelas correspondentes no BD
     synchronize: true,
     logging: true
   }),
-  // Inserir nome da classe module de cada entidade (ex.: PostagemModule)
+  CategoriaModule, ProdutoModule, UsuarioModule, AuthModule
   ],
   controllers: [],
   providers: [],

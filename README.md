@@ -5,9 +5,7 @@ Este é um projeto de e-commerce desenvolvido com o framework NestJS, focado na 
 ## Funcionalidades
 
 - **Autenticação de Usuários**: Criação de conta e login com JWT.
-- **Gestão de Produtos**: Adição, edição e remoção de produtos.
-- **Carrinho de Compras**: Adicionar e remover produtos do carrinho.
-- **Pedidos**: Visualizar e gerenciar pedidos.
+- **Gestão de Produtos**: Adição, edição e remoção de produtos e suas categorias.
 
 ## Como Rodar o Projeto
 
@@ -37,4 +35,4 @@ Este é um projeto de e-commerce desenvolvido com o framework NestJS, focado na 
 
 ## Contribuição
 
-Sinta-se à vontade para contribuir para este projeto! Abra um pull request para sugerir melhorias.
+Sinta-se à vontade para contribuir para este projeto! Abra um pull request para sugerir melhorias :D

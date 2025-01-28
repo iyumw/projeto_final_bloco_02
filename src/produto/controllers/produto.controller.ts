@@ -9,7 +9,7 @@ export class ProdutoController {
     constructor(
         private readonly produtoService: ProdutoService
     ){}
-
+    
     @Get()
     @HttpCode(HttpStatus.OK)
     findAll(): Promise<Produto[]>{

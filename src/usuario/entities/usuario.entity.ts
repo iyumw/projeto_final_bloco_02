@@ -7,9 +7,6 @@ import { Produto } from "../../produto/entities/produto.entity"
 @Entity({name: "tb_usuarios"})
 export class Usuario {
 
-    // @OneToMany(() => Produto, (produto) => produto.usuario)
-    // produto: Produto[]
-
     @PrimaryGeneratedColumn() 
     id: number
 

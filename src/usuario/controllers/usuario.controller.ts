@@ -8,7 +8,6 @@ import { JwtAuthGuard } from "../../auth/guard/jwat-auth.guard";
 export class UsuarioController{
 
     constructor(private readonly usuarioService: UsuarioService){ }
-
     @UseGuards(JwtAuthGuard)
     @Get('/all')
     @HttpCode(HttpStatus.OK)

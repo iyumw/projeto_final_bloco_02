@@ -1,12 +1,13 @@
 import { Transform, TransformFnParams } from "class-transformer";
 import { IsNotEmpty } from "class-validator";
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Produto } from "../../produto/entities/produto.entity";
 
 @Entity({name: 'tb_categorias'})
 export class Categoria {
 
-    // @OneToMany(() => Produto, (produto) => produto.categoria)
-    // produto: Produto[] //Cria um array de objetos postagem pra visualizar, pq um tema pode ter 1 ou mais postagens
+    @OneToMany(() => Produto, (produto) => produto.categoria)
+    produto: Produto[] //Cria um array de objetos postagem pra visualizar, pq um tema pode ter 1 ou mais postagens
 
     @PrimaryGeneratedColumn()
     id: number;

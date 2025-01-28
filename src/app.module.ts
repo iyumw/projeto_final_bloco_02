@@ -4,6 +4,9 @@ import { CategoriaModule } from './categoria/categoria.module';
 import { Categoria } from './categoria/entities/categoria.entity';
 import { Produto } from './produto/entities/produto.entity';
 import { ProdutoModule } from './produto/produto.module';
+import { Usuario } from './usuario/entities/usuario.entity';
+import { UsuarioModule } from './usuario/usuario.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -13,11 +16,11 @@ import { ProdutoModule } from './produto/produto.module';
     username: 'root',
     password: 'root',
     database: 'db_farmacia_goal', 
-    entities: [Categoria, Produto], // Cadastrar as Classes Entities, para que o TypeORM possa gerar as tabelas correspondentes no BD
+    entities: [Categoria, Produto, Usuario], // Cadastrar as Classes Entities, para que o TypeORM possa gerar as tabelas correspondentes no BD
     synchronize: true,
     logging: true
   }),
-  CategoriaModule, ProdutoModule 
+  CategoriaModule, ProdutoModule, UsuarioModule, AuthModule
   ],
   controllers: [],
   providers: [],

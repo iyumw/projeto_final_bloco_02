@@ -1,7 +1,9 @@
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseFloatPipe, ParseIntPipe, Post, Put, Query, UseGuards } from "@nestjs/common";
 import { ProdutoService } from "../services/produto.service";
 import { Produto } from "../entities/produto.entity";
+import { JwtAuthGuard } from "../../auth/guard/jwat-auth.guard";
 
+@UseGuards(JwtAuthGuard)
 @Controller('/produtos')
 export class ProdutoController {
     constructor(

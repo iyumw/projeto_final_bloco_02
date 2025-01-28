@@ -37,4 +37,4 @@ Este é um projeto de e-commerce desenvolvido com o framework NestJS, focado na 
 
 ## Contribuição
 
-Sinta-se à vontade para contribuir para este projeto! Abra um pull request para sugerir melhorias.
+Sinta-se à vontade para contribuir para este projeto! Abra um pull request para sugerir melhorias :D

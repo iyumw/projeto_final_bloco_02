@@ -32,6 +32,7 @@ Este é um projeto de e-commerce desenvolvido com o framework NestJS, focado na 
 - NestJS
 - TypeScript
 - Banco de dados relacional (MySQL)
+- Jwt para autenticação de usuários
 
 ## Contribuição
 
